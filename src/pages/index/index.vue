@@ -3,11 +3,6 @@
     <i-notice-bar icon="systemprompt" loop>
       {{notice}}珍藏你的回忆时刻
       </i-notice-bar>
-      <i-grid-item i-class="no-border">
-        <i-grid-item v-for="item in grids" :key="item" i-class="no-border">
-          <i-grid-label>{{item}}</i-grid-label>
-          </i-grid-item>
-           </i-grid-item>
     <i-grid>
       <i-grid-item i-class="no-border">
         <i-grid-icon>
@@ -47,7 +42,6 @@ export default {
   data () {
     return {
          notice: '4.3',
-         grids: ['过去','现在','未来']
     }
   },
 
