@@ -23,12 +23,16 @@
             <i-grid-label>未来</i-grid-label>
              </i-grid-item>
              </i-grid>
+
              <i-panel title="精彩推荐">
-                 <i-card i-class="top-padding" title="卡片标题" extra="额外内容" thumb="https://i.loli.net/2017/08/21/599a521472424.jpg">
-                 <view slot="content">内容不错</view>
-                 <view slot="footer">尾部内容</view>
+               <view class="top-padding">
+                  <view v-for="item in ShowTime" :key='item' class="top-padding">
+                 <i-card title="item.name" extra="item.type" thumb="https://i.loli.net/2017/08/21/599a521472424.jpg">
+                 <view slot="content">欣赏时刻</view>
+                 <view slot="footer">{{item.time}}</view>
                 </i-card>
-               
+                  </view>
+               </view>
             </i-panel>
           
         </div>
@@ -65,7 +69,14 @@ export default {
   },
 
   created () {
-    // let app = getApp()
+    const db = wx.cloud.database({ env: 'memory-467816'})
+    db.collection('ShowTime').get().then(
+      res => {
+        console.log(res)
+        this.ShowTime = res.data
+      }
+    )
+    
   }
 }
 </script>
