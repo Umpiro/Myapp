@@ -6,19 +6,19 @@
     <i-grid>
       <i-grid-item i-class="no-border">
         <i-grid-icon>
-          <image src="/static/tabs/home.png" />
+          <image src="/static/tabs/过去.png" />
            </i-grid-icon>
             <i-grid-label>过去</i-grid-label>
              </i-grid-item>
       <i-grid-item i-class="no-border">
         <i-grid-icon>
-          <image src="/static/tabs/home.png" />
+          <image src="/static/tabs/现在.png" />
            </i-grid-icon>
             <i-grid-label>现在</i-grid-label>
              </i-grid-item>
       <i-grid-item i-class="no-border">
         <i-grid-icon>
-          <image src="/static/tabs/home.png" />
+          <image src="/static/tabs/未来.png" />
            </i-grid-icon>
             <i-grid-label>未来</i-grid-label>
              </i-grid-item>
@@ -43,9 +43,10 @@
 import card from '@/components/card'
 
 export default {
+  
   data () {
-    return {
-         notice: '4.3',
+    return {ShowTime:[],
+         notice: '4.10',
     }
   },
 
@@ -76,7 +77,9 @@ export default {
         this.ShowTime = res.data
       }
     )
-    
+    wx.cloud.callFunction({ name: 'me' }).then(
+      res => {console.log(res)}
+    )
   }
 }
 </script>
