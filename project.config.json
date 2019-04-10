@@ -8,12 +8,12 @@
 		"newFeature": true,
 		"autoAudits": false
 	},
-	"cloudfunctionRoot": "/functions/",
+	"cloudfunctionRoot": "functions/",
 	"miniprogramRoot": "dist/wx/",
 	"compileType": "miniprogram",
 	"appid": "wxbc409965ea10382b",
 	"projectname": "memory",
-	"libVersion": "2.6.4",
+	"libVersion": "2.6.5",
 	"condition": {
 		"search": {
 			"current": -1,
