@@ -6,24 +6,17 @@
     <i-grid>
       <i-grid-item i-class="no-border">
         <i-grid-icon>
-          <image src="/static/tabs/过去.png" />
+          <image src="/static/tabs/发现.png" />
            </i-grid-icon>
-            <i-grid-label>过去</i-grid-label>
+            <i-grid-label>发现</i-grid-label>
              </i-grid-item>
       <i-grid-item i-class="no-border">
         <i-grid-icon>
-          <image src="/static/tabs/现在.png" />
+          <image src="/static/tabs/好友.png" />
            </i-grid-icon>
-            <i-grid-label>现在</i-grid-label>
+            <i-grid-label>好友</i-grid-label>
              </i-grid-item>
-      <i-grid-item i-class="no-border">
-        <i-grid-icon>
-          <image src="/static/tabs/未来.png" />
-           </i-grid-icon>
-            <i-grid-label>未来</i-grid-label>
-             </i-grid-item>
-             </i-grid>
-
+            </i-grid>
              <i-panel title="精彩推荐">
                <view class="top-padding">
                   <view v-for="item in ShowTime" :key='item' class="top-padding">
