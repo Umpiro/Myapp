@@ -8,13 +8,13 @@
   ],
   "window": {
     "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "WeChat",
+    "navigationBarBackgroundColor": "#EE9572",
+    "navigationBarTitleText": "M回忆时刻",
     "navigationBarTextStyle": "black"
   },
   "tabBar": {
     "color": "#999",
-    "backgroundColor": "#fafafa",
+    "backgroundColor": "#CDB7B5",
     "selectedColor": "#333",
     "borderStyle": "white",
 

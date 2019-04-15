@@ -4,12 +4,7 @@
         <i-tab key="tab1" title="选项1"></i-tab>
         <i-tab key="tab1" title="选项2"></i-tab>
         <i-tab key="tab1" title="选项3"></i-tab>
-        <i-tab key="tab1" title="选项4"></i-tab>
-        <i-tab key="tab1" title="选项5"></i-tab>
-        <i-tab key="tab1" title="选项6"></i-tab>
-        <i-tab key="tab1" title="选项7"></i-tab>
-        <i-tab key="tab1" title="选项8"></i-tab>
-        <i-tab key="tab1" title="选项9"></i-tab>
+        <i-tab key="tab1" title="选项4"></i-tab>>
         </i-tabs>
   </div>
 </template>

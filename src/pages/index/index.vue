@@ -20,7 +20,7 @@
              <i-panel title="精彩推荐">
                <view class="top-padding">
                   <view v-for="item in ShowTime" :key='item' class="top-padding">
-                 <i-card title="item.name" extra="item.type" thumb="https://i.loli.net/2017/08/21/599a521472424.jpg">
+                 <i-card :title="item.name" :extra="item.type" thumb="/static/tabs/照片.png">
                  <view slot="content">欣赏时刻</view>
                  <view slot="footer">{{item.time}}</view>
                 </i-card>
