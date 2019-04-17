@@ -1,11 +1,30 @@
 <template>
-  <div>
-      <i-tabs :current="current_scroll" scroll @change="handleChangeScroll">
-        <i-tab key="tab1" title="选项1"></i-tab>
-        <i-tab key="tab1" title="选项2"></i-tab>
-        <i-tab key="tab1" title="选项3"></i-tab>
-        <i-tab key="tab1" title="选项4"></i-tab>>
-        </i-tabs>
+  <div>    
+<i-panel title="搜索照片">
+    <i-input placeholder="请输入你想搜索的关键字" />
+</i-panel>
+ <i-panel title="添加相册">
+               <view class="top-padding">
+                 <i-card title="风景类" extra="点击添加" thumb="/static/tabs/风景.png">              
+                 <view slot="footer">点击添加</view>
+                </i-card>
+               </view>
+               <view class="top-padding">
+                 <i-card title="人像类" extra="点击添加" thumb="/static/tabs/人像.png">              
+                 <view slot="footer">点击添加</view>
+                </i-card>
+               </view>
+               <view class="top-padding">
+                 <i-card title="物品类" extra="点击添加" thumb="/static/tabs/物品.png">              
+                 <view slot="footer">点击添加</view>
+                </i-card>
+               </view>
+               <view class="top-padding">
+                 <i-card title="其他" extra="点击添加" thumb="/static/tabs/其他.png">              
+                 <view slot="footer">点击添加</view>
+                </i-card>
+               </view>
+            </i-panel>
   </div>
 </template>
 

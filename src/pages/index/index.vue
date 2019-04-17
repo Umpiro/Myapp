@@ -39,7 +39,7 @@ export default {
   
   data () {
     return {ShowTime:[],
-         notice: '4.10',
+         notice: '',
     }
   },
 

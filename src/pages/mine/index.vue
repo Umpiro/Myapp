@@ -2,12 +2,21 @@
   <div>
     <view class="userinfo">
       <view class="userinfo-avatar">
-    <open-data type="userAvatarUrl"></open-data>
+    <open-data  size="small" shape="square" type="userAvatarUrl" ></open-data>
     </view>
     <open-data type="userNickName"></open-data>
     </view>
     <i-cell-group>
       </i-cell-group>
+     <i-cell-group>
+    <i-cell title="通知" is-link></i-cell>
+    <i-cell title="编辑资料" is-link url="/pages/dashboard/index"></i-cell>
+    <i-cell title="帮助与设置" is-link url="/pages/dashboard/index" only-tap-footer></i-cell>
+    <i-cell title="共享相册">
+        <switch slot="footer" checked />
+    </i-cell>
+</i-cell-group>
+<i-button bind:click="handleClick" type="success" shape="circle">退出登录</i-button>
         </div>
     
 </template>
