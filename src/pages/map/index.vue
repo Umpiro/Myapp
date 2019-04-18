@@ -5,22 +5,22 @@
 </i-panel>
  <i-panel title="添加相册">
                <view class="top-padding">
-                 <i-card title="风景类" extra="点击添加" thumb="/static/tabs/风景.png">              
+                 <i-card title="风景类" extra="点击添加" thumb="/static/tabs/out.png">              
                  <view slot="footer">点击添加</view>
                 </i-card>
                </view>
                <view class="top-padding">
-                 <i-card title="人像类" extra="点击添加" thumb="/static/tabs/人像.png">              
+                 <i-card title="人像类" extra="点击添加" thumb="/static/tabs/people.png">              
                  <view slot="footer">点击添加</view>
                 </i-card>
                </view>
                <view class="top-padding">
-                 <i-card title="物品类" extra="点击添加" thumb="/static/tabs/物品.png">              
+                 <i-card title="物品类" extra="点击添加" thumb="/static/tabs/thing.png">              
                  <view slot="footer">点击添加</view>
                 </i-card>
                </view>
                <view class="top-padding">
-                 <i-card title="其他" extra="点击添加" thumb="/static/tabs/其他.png">              
+                 <i-card title="其他" extra="点击添加" thumb="/static/tabs/extra.png">              
                  <view slot="footer">点击添加</view>
                 </i-card>
                </view>

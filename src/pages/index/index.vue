@@ -3,6 +3,12 @@
     <i-notice-bar icon="systemprompt" loop>
       {{notice}}珍藏你的回忆时刻
       </i-notice-bar>
+      <swiper class='lunbo' indicator-dots="true" autoplay="true"
+      interval="4000">
+      <swiper-item><image src='static/images/person.jpg'></image></swiper-item>
+       <swiper-item><image src='static/images/person2.jpg'></image></swiper-item>
+        <swiper-item><image src='static/images/sky.jpg'></image></swiper-item>
+      </swiper>
     <i-grid>
       <i-grid-item i-class="no-border">
         <i-grid-icon>
@@ -10,6 +16,7 @@
            </i-grid-icon>
             <i-grid-label>发现</i-grid-label>
              </i-grid-item>
+             
       <i-grid-item i-class="no-border">
         <i-grid-icon>
           <image src="/static/tabs/haoyou.png" />
@@ -42,7 +49,7 @@ export default {
          notice: '',
     }
   },
-
+ 
   components: {
     card
   },
