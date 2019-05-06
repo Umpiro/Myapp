@@ -3,14 +3,21 @@
     <i-notice-bar icon="systemprompt" loop>
       {{notice}}珍藏你的回忆时刻
       </i-notice-bar>
-      <swiper class='lunbo' indicator-dots="true" autoplay="true"
-      interval="4000">
-      <swiper-item><image src='static/images/person.jpg'></image></swiper-item>
-       <swiper-item><image src='static/images/person2.jpg'></image></swiper-item>
-        <swiper-item><image src='static/images/sky.jpg'></image></swiper-item>
-      </swiper>
+    <swiper
+      :indicator-dots="indicatorDots"
+      :autoplay="autoplay"
+      :interval="interval"
+      :duration="duration"
+      style="height:200px"
+    >
+    <block v-for="item in imgUrls" :key="item">
+      <swiper-item>
+        <image :src="item" style="width:100%;"/>
+      </swiper-item>
+    </block>
+  </swiper>
     <i-grid>
-      <i-grid-item i-class="no-border">
+      <i-grid-item @click="goList(item.url)" i-class="no-border" v-for="item in grids" :key="item" >
         <i-grid-icon>
           <image src="/static/tabs/faxian.png" />
            </i-grid-icon>
@@ -45,7 +52,15 @@ import card from '@/components/card'
 export default {
   
   data () {
-    return {ShowTime:[],
+    return {
+      imgUrls: [
+        '/static/images/person.jpg',
+        '/static/images/person2.jpg',
+        '/static/images/sky.jpg'
+      ],
+      
+      
+      ShowTime:[],
          notice: '',
     }
   },
