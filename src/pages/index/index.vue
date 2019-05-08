@@ -24,7 +24,7 @@
             <i-grid-label>发现</i-grid-label>
              </i-grid-item>
              
-      <i-grid-item i-class="no-border">
+      <i-grid-item i-class="no-border" wx.navigateTo(url:)>
         <i-grid-icon>
           <image src="/static/tabs/haoyou.png" />
            </i-grid-icon>
@@ -58,7 +58,11 @@ export default {
         '/static/images/person2.jpg',
         '/static/images/sky.jpg'
       ],
-      
+       grids: [
+        {type:'烧烤',img:'/static/tabs/extra.png',"url":'../found/main?type=1'},
+        {type:'零食',img:'/static/tabs/extra.png',"url":'../found/main?type=2'}
+        
+      ],
       
       ShowTime:[],
          notice: '',
@@ -70,6 +74,9 @@ export default {
   },
 
   methods: {
+    goList (url) {
+      mpvue.navigateTo({ url })
+    },
     bindViewTap () {
       const url = '../logs/main'
       if (mpvuePlatform === 'wx') {

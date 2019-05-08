@@ -24,7 +24,7 @@ export default {
 
   onLoad (option){
     console.log(option.type)
-    this.recommand = require('@/data/' + option.type + '.json')
+    this.recommand = require( option.type + '.json')
   },
 
   created () {
