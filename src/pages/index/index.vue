@@ -24,11 +24,12 @@
             <i-grid-label>发现</i-grid-label>
              </i-grid-item>
              
-      <i-grid-item i-class="no-border" wx.navigateTo(url:)>
+      <i-grid-item  @click="goList(item.url)" i-class="no-border" v-for="item in grids" :key="item" >
         <i-grid-icon>
           <image src="/static/tabs/haoyou.png" />
            </i-grid-icon>
             <i-grid-label>好友</i-grid-label>
+            
              </i-grid-item>
             </i-grid>
              <i-panel title="精彩推荐">
@@ -60,7 +61,7 @@ export default {
       ],
        grids: [
         {type:'烧烤',img:'/static/tabs/extra.png',"url":'../found/main?type=1'},
-        {type:'零食',img:'/static/tabs/extra.png',"url":'../found/main?type=2'}
+        
         
       ],
       

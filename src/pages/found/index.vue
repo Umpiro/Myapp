@@ -1,6 +1,6 @@
 <template>
   <div>
-    <i-panel title="分类推荐">
+    <i-panel title="推荐">
       <view>
         <i-card i-class="split" v-for="item in recommand" :key="item" :extra="item.name" :thumb="item.img">
             <view slot="content">推荐理由：{{item.remark}}</view>
