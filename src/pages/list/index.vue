@@ -20,10 +20,11 @@ export default {
 
   onLoad (option){
     var type ='发现'
-    if (option.type=1){
+    console.log('option: ',option)
+    if (option.type==1){
       type='发现'
     }
-    if (option.type=2){
+    if (option.type==2){
       type='好友'
     }
     this.list = require( '@/data/'+type + '.json')
