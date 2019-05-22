@@ -17,14 +17,14 @@
     </block>
   </swiper>
     <i-grid>
-      <i-grid-item @click="goType(item.url)" i-class="no-border" v-for="item in grids" :key="item" >
+      <i-grid-item @click="goType(1)" i-class="no-border"  :key="item" >
         <i-grid-icon>
           <image src="/static/tabs/faxian.png" />
            </i-grid-icon>
             <i-grid-label>发现</i-grid-label>
              </i-grid-item>
              
-      <i-grid-item  @click="gotType(item.url)" i-class="no-border" v-for="item in grids" :key="item" >
+      <i-grid-item  @click="goType(2)" i-class="no-border"  :key="item" >
         <i-grid-icon>
           <image src="/static/tabs/haoyou.png" />
            </i-grid-icon>
@@ -71,9 +71,9 @@ export default {
   },
 
   methods: {
-    goType(type) {
+    goType(type){
       console.log(type)
-      let url = '../list/main?type=' +type.title
+      let url = '../list/main?type=' + type
       mpvue.navigateTo({ url })
     },
     bindViewTap () {
