@@ -17,14 +17,14 @@
     </block>
   </swiper>
     <i-grid>
-      <i-grid-item @click="goList(item.url)" i-class="no-border" v-for="item in grids" :key="item" >
+      <i-grid-item @click="goType(item.url)" i-class="no-border" v-for="item in grids" :key="item" >
         <i-grid-icon>
           <image src="/static/tabs/faxian.png" />
            </i-grid-icon>
             <i-grid-label>发现</i-grid-label>
              </i-grid-item>
              
-      <i-grid-item  @click="goList(item.url)" i-class="no-border" v-for="item in grids" :key="item" >
+      <i-grid-item  @click="gotType(item.url)" i-class="no-border" v-for="item in grids" :key="item" >
         <i-grid-icon>
           <image src="/static/tabs/haoyou.png" />
            </i-grid-icon>
@@ -59,11 +59,7 @@ export default {
         '/static/images/person2.jpg',
         '/static/images/sky.jpg'
       ],
-       grids: [
-        {type:'烧烤',img:'/static/tabs/extra.png',"url":'../found/main?type=1'},
-        
-        
-      ],
+       
       
       ShowTime:[],
          notice: '',
@@ -75,7 +71,9 @@ export default {
   },
 
   methods: {
-    goList (url) {
+    goType(type) {
+      console.log(type)
+      let url = '../list/main?type=' +type.title
       mpvue.navigateTo({ url })
     },
     bindViewTap () {
