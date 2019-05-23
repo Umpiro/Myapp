@@ -25,10 +25,12 @@
                 </i-card>
                </view>
             </i-panel>
+           
   </div>
 </template>
 
 <script>
+
 import card from '@/components/card'
 
 export default {
@@ -47,7 +49,7 @@ export default {
   },
 
   methods: {
-
+        
   
     handleChangeScroll (event) {
      console.log(event)
