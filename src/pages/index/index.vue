@@ -34,15 +34,28 @@
             </i-grid>
              <i-panel title="精彩推荐">
                <view class="top-padding">
-                  <view v-for="item in ShowTime" :key='item' class="top-padding">
-                 <i-card :title="item.name" :extra="item.type" thumb="/static/tabs/photo.png">
+                  <view :key='item' class="top-padding">
+                 <i-card :title=清爽一夏 :extra=风景 thumb="/static/tabs/timg.jpg">
                  <view slot="content">欣赏时刻</view>
-                 <view slot="footer">{{item.time}}</view>
+                 <view slot="footer">2017年夏</view>
                 </i-card>
                   </view>
+                  <view :key='item' class="top-padding">
+                 <i-card :title=圣诞节回忆 :extra=人物 thumb="/static/tabs/timg.jpg">
+                 <view slot="content">欣赏时刻</view>
+                 <view slot="footer">2018.12.25</view>
+                </i-card>
+                  </view>
+                   <view :key='item' class="top-padding">
+                 <i-card :title=艺术展 :extra=静物 thumb="/static/tabs/timg.jpg">
+                 <view slot="content">欣赏时刻</view>
+                 <view slot="footer">2019.1</view>
+                </i-card>
+                  </view>
+                  
                </view>
             </i-panel>
-          
+        
         </div>
     
 </template>
@@ -54,6 +67,11 @@ export default {
   
   data () {
     return {
+      title_name: "热门",
+      grids: [
+        {title:"外卖",image:"/static/images/1.png"},
+        {title:"零食",image:"/static/images/2.png"}
+      ],
       imgUrls: [
         '/static/images/person.jpg',
         '/static/images/person2.jpg',
@@ -75,14 +93,6 @@ export default {
       console.log(type)
       let url = '../list/main?type=' + type
       mpvue.navigateTo({ url })
-    },
-    bindViewTap () {
-      const url = '../logs/main'
-      if (mpvuePlatform === 'wx') {
-        mpvue.switchTab({ url })
-      } else {
-        mpvue.navigateTo({ url })
-      }
     },
     clickHandle (ev) {
       console.log('clickHandle:', ev)
