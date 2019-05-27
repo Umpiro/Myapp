@@ -34,25 +34,12 @@
             </i-grid>
              <i-panel title="精彩推荐">
                <view class="top-padding">
-                  <view :key='item' class="top-padding">
-                 <i-card :title=清爽一夏 :extra=风景 thumb="/static/tabs/timg.jpg">
+                  <view v-for="item in ShowTime" :key='item' class="top-padding">
+                 <i-card :title="item.name" :extra="item.type" thumb="/static/tabs/photo.png">
                  <view slot="content">欣赏时刻</view>
-                 <view slot="footer">2017年夏</view>
+                 <view slot="footer">{{item.time}}</view>
                 </i-card>
                   </view>
-                  <view :key='item' class="top-padding">
-                 <i-card :title=圣诞节回忆 :extra=人物 thumb="/static/tabs/timg.jpg">
-                 <view slot="content">欣赏时刻</view>
-                 <view slot="footer">2018.12.25</view>
-                </i-card>
-                  </view>
-                   <view :key='item' class="top-padding">
-                 <i-card :title=艺术展 :extra=静物 thumb="/static/tabs/timg.jpg">
-                 <view slot="content">欣赏时刻</view>
-                 <view slot="footer">2019.1</view>
-                </i-card>
-                  </view>
-                  
                </view>
             </i-panel>
         
